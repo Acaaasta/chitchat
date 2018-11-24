@@ -1,0 +1,20 @@
+#listView {
+    -fx-background-image: url("/img/1.jpg");
+
+}
+
+#textField {
+    -fx-background-color: greenyellow;
+}
+
+#btn1 {
+    -fx-font-size: 14px;
+    -fx-padding: 2;
+    -fx-background-color: aqua;
+    -fx-text-fill: coral;
+}
+
+#btn1:hover {
+    -fx-background-color: blueviolet;
+}
+

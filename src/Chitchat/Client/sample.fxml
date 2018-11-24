@@ -1,0 +1,30 @@
+<?scenebuilder-stylesheet /css/styles.css?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox fx:controller="Chitchat.Client.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <HBox fx:id="upperPanel">
+        <TextField HBox.hgrow="ALWAYS" promptText="Логин" fx:id="loginField"/>
+        <PasswordField promptText="Пароль" fx:id="passwordField" onAction="#tryToAuth"/>
+        <Button onAction="#tryToAuth" text="Войти"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@/css/Styles.css"/>
+    </stylesheets>
+    <ListView fx:id="listView" editable="false" VBox.vgrow="ALWAYS"/>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+            <HBox fx:id="bottomPanel" visible="true">
+                <TextField fx:id="textField" HBox.hgrow="ALWAYS" promptText="Введите сообщение..." onAction="#sendMsg"/>
+                <Button text="Send" fx:id="btn1" onAction="#sendMsg"/>
+            </HBox>
+        </VBox>
+        <ListView fx:id="clientList" managed="false" visible="false"></ListView>
+    </HBox>
+
+</VBox>
